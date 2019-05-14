@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: product
+  rabbitmq:
+    host: 192.168.138.129
+    port: 5672
+    username: guest
+    password: guest
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://192.168.138.129:3306/SpringCloud_Sell?serverTimezone=UTC&characterEncoding=utf8&useSSL=false
+  jpa:
+    show-sql: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+server:
+   port: 8777
