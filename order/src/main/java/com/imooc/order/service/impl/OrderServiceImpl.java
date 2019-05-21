@@ -108,7 +108,7 @@ public class OrderServiceImpl implements OrderService {
         orderMasterRepository.save(orderMaster);
 
         //查询订单详情
-        List<OrderDetail> orderDetailList = orderDetailRepository.findByO rderId(orderId);
+        List<OrderDetail> orderDetailList = orderDetailRepository.findByOrderId(orderId);
         if (CollectionUtils.isEmpty(orderDetailList)) {
             throw new OrderException(ResultEnums.ORDER_DETAIL_NOT_EXIST);
         }
